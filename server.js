@@ -19,7 +19,9 @@ app.use(
     })
 );
 // console.log("MONGO_URI:", process.env.MONGO_URI);
-
+app.get('/', (req, res) => {
+  res.send('Finance Tracker Backend is running ✅');
+});
 app.use(express.json());
 
 connectDB();
